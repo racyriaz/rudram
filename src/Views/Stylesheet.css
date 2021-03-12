@@ -1,0 +1,28 @@
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	font-family: "Montserrat", sans-serif;
+	list-style: none;
+	text-decoration: none;
+	text-align: left;
+}
+
+.flex {
+	display: flex;
+}
+.row {
+	flex-direction: row;
+}
+.col {
+	flex-direction: column;
+}
+.full-width {
+	width: 100%;
+}
+.full-height {
+	height: 100%;
+}
+.block {
+	display: block;
+}
