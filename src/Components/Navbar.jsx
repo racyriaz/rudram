@@ -3,8 +3,8 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Home from "../Views/Home";
 import AirQuality from "../Views/AirQuality";
 import Safety from "../Views/Safety";
-import FeatherIcon from "feather-icons-react";
 import "../Views/Stylesheet.css";
+import { Home } from "react-feather";
 
 function Navbar() {
 	return (
@@ -12,14 +12,8 @@ function Navbar() {
 			<div className="flex row">
 				<nav>
 					<ul>
+						<Home />
 						<li>
-							<FeatherIcon
-								className="icon-color"
-								size="24"
-								icon="Home"
-								fill="#f39189"
-							/>
-							<i data-feather="circle"></i>
 							<Link className="block" to="/home">
 								Home
 							</Link>
