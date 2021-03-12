@@ -26,8 +26,8 @@ function Navbar() {
 			<div className="nav-links">
 				<Link className="block" to={`${to}`}>
 					<div className="flex row flex-align">
-						<div className="lr-pad-5px">{icon}</div>
-						<h5 className="pad-20px">{text}</h5>
+						<div className="lr-pad-5px white">{icon}</div>
+						<h5 className="pad-20px white">{text}</h5>
 					</div>
 				</Link>
 			</div>
@@ -38,9 +38,15 @@ function Navbar() {
 		<Router>
 			<div className="flex row">
 				<nav>
-					<ul>
+					<ul
+						style={{
+							backgroundColor: "gray",
+							height: "100vh",
+							background: "linear-gradient(0.93turn, #67b26f, #4ca2cd)",
+							color: "white",
+						}}
+					>
 						<li className="flex row flex-align">
-							{/* <img src="RudramLogo.svg" alt="Rudram Infra Z analytics" /> */}
 							<object
 								type="image/svg+xml"
 								data="RudramLogo.svg"
@@ -53,7 +59,7 @@ function Navbar() {
 							<h2>RUDRAM</h2>
 						</li>
 						<li>
-							<NavPack to="/home" icon={<HomeIcon />} text="Home" />
+							<NavPack to="/" icon={<HomeIcon />} text="Home" />
 						</li>
 						<li>
 							<NavPack to="/air-quality" icon={<Wind />} text="Air Quality" />
