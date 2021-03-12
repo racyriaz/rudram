@@ -13,6 +13,11 @@
 	fill: orange !important;
 }
 
+.flex-align {
+	justify-content: flex-start;
+	align-items: center;
+}
+
 .flex {
 	display: flex;
 }
@@ -30,4 +35,17 @@
 }
 .block {
 	display: block;
+}
+.pad-10px {
+	padding: 10px;
+}
+.pad-20px {
+	padding: 20px;
+}
+.lr-pad-5px {
+	padding: 0 15px;
+}
+
+.nav-links {
+	color: yellowgreen !important;
 }
