@@ -3,8 +3,9 @@ import "./Stylesheet.css";
 
 function Safety() {
 	return (
-		<div className="f-container">
-			<h1>Safety & Security</h1>
+		<div>
+			<h1>Safety page</h1>
+			<h1>page contents</h1>
 		</div>
 	);
 }

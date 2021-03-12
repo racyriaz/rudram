@@ -7,6 +7,7 @@ import WasteManagement from "../Views/WasteManagement";
 import WaterQuality from "../Views/WaterQuality";
 import Attendance from "../Views/Attendance";
 import "../Views/Stylesheet.css";
+import "../../public/RudramLogo.svg";
 
 import {
 	Home as HomeIcon,
@@ -38,8 +39,17 @@ function Navbar() {
 			<div className="flex row">
 				<nav>
 					<ul>
-						<li>
-							<img src="" alt="" />
+						<li className="flex row flex-align">
+							{/* <img src="RudramLogo.svg" alt="Rudram Infra Z analytics" /> */}
+							<object
+								type="image/svg+xml"
+								data="RudramLogo.svg"
+								width="35"
+								height="auto"
+								style={{ margin: "10px" }}
+							>
+								Your browser does not support SVG.
+							</object>
 							<h2>RUDRAM</h2>
 						</li>
 						<li>
@@ -92,7 +102,16 @@ function Navbar() {
 					<Route path="/safety-security">
 						<Safety />
 					</Route>
-					<Route path="/">
+					<Route path="/water-quality">
+						<WaterQuality />
+					</Route>
+					<Route path="/waste-management">
+						<WasteManagement />
+					</Route>
+					<Route path="/attendance">
+						<Attendance />
+					</Route>
+					<Route exact path="/">
 						<Home />
 					</Route>
 				</Switch>

@@ -3,8 +3,9 @@ import "./Stylesheet.css";
 
 function WasteManagement() {
 	return (
-		<div className="f-container">
-			<h1>waste management</h1>
+		<div>
+			<h1>Waste Management page</h1>
+			<h1>page contents</h1>
 		</div>
 	);
 }
