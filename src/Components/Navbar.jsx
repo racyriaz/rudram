@@ -3,27 +3,26 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Home from "../Views/Home";
 import AirQuality from "../Views/AirQuality";
 import Safety from "../Views/Safety";
+import FeatherIcon from "feather-icons-react";
+import "../Views/Stylesheet.css";
 
 function Navbar() {
-	function NavItem({ content, icon }) {
-		return (
-			<>
-				<img src={"../Assets/icons/" + `${icon}` + ".svg"} alt={`${icon}`} />
-				{/* <i className={"../Assets/icons/" + `${icon}` + ".svg"}></i> */}
-				<Link className="block" to="/">
-					{content}
-				</Link>
-			</>
-		);
-	}
-
 	return (
 		<Router>
 			<div className="flex row">
 				<nav>
 					<ul>
 						<li>
-							<NavItem content="Home" icon="bi bi-house-fill" />
+							<FeatherIcon
+								className="icon-color"
+								size="24"
+								icon="Home"
+								fill="#f39189"
+							/>
+							<i data-feather="circle"></i>
+							<Link className="block" to="/home">
+								Home
+							</Link>
 						</li>
 						<li>
 							<Link className="block" to="/air-quality">

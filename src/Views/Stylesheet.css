@@ -6,6 +6,11 @@
 	list-style: none;
 	text-decoration: none;
 	text-align: left;
+	background-color: #ffe6ca;
+}
+
+.icon-color {
+	fill: orange !important;
 }
 
 .flex {
