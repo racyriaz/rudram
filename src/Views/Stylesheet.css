@@ -8,6 +8,10 @@
 	text-align: left;
 	/* background-color: #ffe6ca; */
 }
+body {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
 .icon-color {
 	fill: orange !important;
 }
@@ -92,4 +96,12 @@
 	width: 5px;
 	height: 57px;
 	background-color: rgb(255, 136, 0) !important;
+}
+
+/* /////////////////////////   views /////////////////////////////////// */
+
+.view-container {
+	display: block;
+	width: 100%;
+	margin-right: 20px;
 }
