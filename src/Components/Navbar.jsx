@@ -45,7 +45,8 @@ function Navbar() {
 						style={{
 							backgroundColor: "gray",
 							height: "100vh",
-							background: "linear-gradient(0.93turn, #67b26f, #4ca2cd)",
+							background:
+								"linear-gradient(0.93turn, rgb(103, 178, 111), rgb(0 136 204))",
 							color: "white",
 						}}
 					>
