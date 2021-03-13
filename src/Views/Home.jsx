@@ -5,7 +5,7 @@ import Card from "../Components/Card";
 function Home() {
 	return (
 		<div className="view-container">
-			<div className="flex row">
+			<div className="flex row justify-evenly">
 				<Card
 					color="linear-gradient(0.15turn, rgba(0, 23, 162, 0.70), rgba(125, 0, 134, 0.70))"
 					content="Live Relay"
