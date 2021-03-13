@@ -1,6 +1,9 @@
 import React from "react";
 import "./Stylesheet.css";
 import Card from "../Components/Card";
+import SubCard from "../Components/SubCard";
+import ChaCard from "../Components/ChaCard";
+import "../Assets/RudramLogo.svg";
 
 function Home() {
 	return (
@@ -22,6 +25,23 @@ function Home() {
 					color="linear-gradient(0.13turn, rgba(114, 2, 114, 0.70), rgba(255, 38, 76, 0.70))"
 					content="Know your Air Quality"
 				/>
+			</div>
+			<div className="flex row justify-between">
+				<div
+					className="flex row sub-container"
+					style={{ margin: "0 2rem", width: "46.5%" }}
+				>
+					{/* <Card color="wheat" content="Character" /> */}
+					<ChaCard charater="RudramLogo.svg" width="80px" margin="auto" />
+					<Card
+						color="green"
+						content={<SubCard line1="1" line2="2" line3="3" />}
+					/>
+					<Card
+						color="green"
+						content={<SubCard line1="1" line2="2" line3="3" />}
+					/>
+				</div>
 			</div>
 		</div>
 	);

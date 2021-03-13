@@ -22,3 +22,25 @@
 	width: 16.5rem;
 	border-radius: 0.5rem;
 }
+
+.mar-tb-5px {
+	margin: 5px 0;
+}
+.mar-tb-10px {
+	margin: 10px 0;
+}
+.cha-card {
+	width: 15rem;
+	height: 20.5rem;
+	border-radius: 0.5rem;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	background: linear-gradient(0.15turn, #fdfdfdd5, #d8d8d8de);
+	color: white;
+	font-size: 1.5rem;
+	font-weight: 600;
+	margin: 1rem;
+	text-align: center;
+}
