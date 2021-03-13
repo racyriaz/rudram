@@ -25,9 +25,12 @@ function Navbar() {
 		return (
 			<div className="nav-links">
 				<Link className="block" to={`${to}`}>
-					<div className="flex row flex-align">
-						<div className="lr-pad-5px white">{icon}</div>
-						<h5 className="pad-20px white">{text}</h5>
+					<div className="flex row justify-between">
+						<div className="flex row flex-align">
+							<div className="lr-pad-5px white">{icon}</div>
+							<h5 className="pad-20px font-14px white font-600">{text}</h5>
+						</div>
+						<div className="nav-highlight"></div>
 					</div>
 				</Link>
 			</div>
@@ -46,7 +49,10 @@ function Navbar() {
 							color: "white",
 						}}
 					>
-						<li className="flex row flex-align">
+						<li
+							className="flex row flex-align"
+							style={{ padding: "8px 0", backgroundColor: "#1a2c512e" }}
+						>
 							<object
 								type="image/svg+xml"
 								data="RudramLogo.svg"
@@ -56,7 +62,7 @@ function Navbar() {
 							>
 								Your browser does not support SVG.
 							</object>
-							<h2>RUDRAM</h2>
+							<h2 style={{ fontWeight: "500" }}>RUDRAM</h2>
 						</li>
 						<li>
 							<NavPack to="/" icon={<HomeIcon />} text="Home" />
