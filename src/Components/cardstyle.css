@@ -1,0 +1,24 @@
+.card {
+	height: 10rem;
+	width: 16.5rem;
+	border-radius: 0.5rem;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	background: linear-gradient(0.15turn, #fdfdfdd5, #d8d8d8de);
+	color: white;
+	font-size: 1.5rem;
+	font-weight: 600;
+	margin: 1rem;
+	text-align: center;
+}
+.card:hover {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.151), 0 6px 20px 0 rgba(0, 0, 0, 0.45);
+}
+
+.anime-card-container {
+	height: 20rem;
+	width: 16.5rem;
+	border-radius: 0.5rem;
+}
