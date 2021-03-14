@@ -44,3 +44,42 @@
 	margin: 1rem;
 	text-align: center;
 }
+
+.sq-card {
+	width: 5rem;
+	height: 5rem;
+	border-radius: 0.5rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	/* background: linear-gradient(0.15turn, #fdfdfdd5, #d8d8d8de); */
+	color: #ebebeb;
+	background-color: #00917c;
+	font-size: 1rem;
+	font-weight: 700;
+	margin: 1rem;
+	text-align: center;
+}
+
+.weather-card {
+	width: 16rem;
+	height: 10rem;
+	font-size: 0.85rem;
+	font-weight: 400;
+	border-radius: 0.5rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: left;
+	color: #1f441e;
+	padding: 0.2rem 1.3rem;
+	margin: 1rem;
+}
+
+.pic-card {
+	border-radius: 0.5rem;
+	display: block;
+	background: linear-gradient(0.15turn, #a53b3bd5, #d8d8d8de);
+	margin: auto;
+	text-align: center;
+}

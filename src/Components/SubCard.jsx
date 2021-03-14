@@ -1,10 +1,12 @@
 import React from "react";
+import "../Views/Stylesheet.css";
 function SubCard({ line1, line2, line3 }) {
 	return (
-		<div>
+		<div className="flex col justify-center">
 			<div className="mar-tb-10px">{line1}</div>
-			<div className="mar-tb-10px">{line2}</div>
-			<div className="mar-tb-10px">{line3}</div>
+			<div className="flex justify-center">
+				{line2}, {line3}
+			</div>
 		</div>
 	);
 }
