@@ -7,7 +7,7 @@ import WasteManagement from "../Views/WasteManagement";
 import WaterQuality from "../Views/WaterQuality";
 import Attendance from "../Views/Attendance";
 import "../Views/Stylesheet.css";
-import "../../public/RudramLogo.svg";
+import Rlogo from "../Assets/Rudramlogo-without-text.svg";
 
 import {
 	Home as HomeIcon,
@@ -56,7 +56,7 @@ function Navbar() {
 						>
 							<object
 								type="image/svg+xml"
-								data="RudramLogo.svg"
+								data={Rlogo}
 								width="35"
 								height="auto"
 								style={{ margin: "10px" }}

@@ -62,24 +62,20 @@
 }
 
 .weather-card {
-	width: 16rem;
+	width: 15.2rem;
 	height: 10rem;
 	font-size: 0.85rem;
 	font-weight: 400;
 	border-radius: 0.5rem;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	text-align: left;
-	color: #1f441e;
+	color: white;
 	padding: 0.2rem 1.3rem;
 	margin: 1rem;
 }
 
 .pic-card {
 	border-radius: 0.5rem;
-	display: block;
 	background: linear-gradient(0.15turn, #a53b3bd5, #d8d8d8de);
-	margin: auto;
-	text-align: center;
+	display: flex;
+	padding: 4rem;
+	margin: 0 2.25rem;
 }

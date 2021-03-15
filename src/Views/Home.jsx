@@ -63,7 +63,7 @@ function Home() {
 						/>
 					</div>
 				</div>
-				<PicHolder content="RudramLogo.svg" margin="1rem" color="black" />
+				<PicHolder content="" margin="1rem" color="black" />
 			</div>
 		</div>
 	);

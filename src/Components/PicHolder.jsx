@@ -2,7 +2,7 @@ import React from "react";
 import "./cardstyle.css";
 import PropTypes from "prop-types";
 
-function PicHolder({ charater, width, margin }) {
+function PicHolder({ charater, width }) {
 	return (
 		<div>
 			<div className="pic-card">
@@ -11,7 +11,6 @@ function PicHolder({ charater, width, margin }) {
 					data={charater}
 					width={width}
 					height="auto"
-					style={{ margin: { margin } }}
 				>
 					Your browser does not support SVG.
 				</object>
@@ -20,8 +19,7 @@ function PicHolder({ charater, width, margin }) {
 	);
 }
 PicHolder.propTypes = {
-	charater: PropTypes.string.isRequired,
+	charater: PropTypes.object.isRequired,
 	width: PropTypes.string.isRequired,
-	margin: PropTypes.string.isRequired,
 };
 export default PicHolder;
