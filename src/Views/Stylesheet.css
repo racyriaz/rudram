@@ -63,6 +63,7 @@ body {
 }
 .white {
 	color: whitesmoke;
+	white-space: nowrap;
 }
 .font-10px {
 	font-size: 10px;

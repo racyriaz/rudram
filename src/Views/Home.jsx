@@ -7,7 +7,8 @@ import SquarCard from "../Components/SquarCard";
 import WeatherCard from "../Components/WeatherCard";
 import PicHolder from "../Components/PicHolder";
 import WeatherIcon from "../Components/WeatherIcon";
-import "../Assets/RudramLogo.svg";
+import cha from "../Assets/RudramLogo.svg";
+import demoImg from "../Assets/demo.jpg";
 
 function Home() {
 	const day = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"][
@@ -16,29 +17,34 @@ function Home() {
 	return (
 		<div className="view-container">
 			<div className="flex row justify-evenly">
-				<Card
-					color="linear-gradient(0.15turn, rgba(0, 23, 162, 0.70), rgba(125, 0, 134, 0.70))"
-					content="Live Relay"
-				/>
-				<Card
-					color="linear-gradient(0.15turn, rgba(252, 74, 26, 0.70), rgba(247, 183, 51, 0.70))"
-					content="Dashboard Views"
-				/>
-				<Card
-					color="linear-gradient(0.65turn, rgba(8, 185, 132, 0.70), rgba(25, 113, 214, 0.70))"
-					content="Predictions"
-				/>
-				<Card
-					color="linear-gradient(0.13turn, rgba(114, 2, 114, 0.70), rgba(255, 38, 76, 0.70))"
-					content="Know your Air Quality"
-				/>
+				<div className="flex row justify-center">
+					<Card
+						color="linear-gradient(0.15turn, rgba(0, 23, 162, 0.70), rgba(125, 0, 134, 0.70))"
+						content="Live Relay"
+					/>
+					<Card
+						color="linear-gradient(0.15turn, rgba(252, 74, 26, 0.70), rgba(247, 183, 51, 0.70))"
+						content="Dashboard Views"
+					/>
+				</div>
+
+				<div className="flex row justify-center">
+					<Card
+						color="linear-gradient(0.65turn, rgba(8, 185, 132, 0.70), rgba(25, 113, 214, 0.70))"
+						content="Predictions"
+					/>
+					<Card
+						color="linear-gradient(0.13turn, rgba(114, 2, 114, 0.70), rgba(255, 38, 76, 0.70))"
+						content="Know your Air Quality"
+					/>
+				</div>
 			</div>
 			<div className="flex row justify-between">
 				<div
-					className="flex row sub-container justify-evenly"
+					className="flex row sub-container justify-center"
 					style={{ width: "50%" }}
 				>
-					<ChaCard charater="RudramLogo.svg" width="80px" margin="auto" />
+					<ChaCard charater={cha} width="80px" margin="auto" />
 					<div className="flex col justify-center">
 						<div className="flex row justify-evenly">
 							<SquarCard
@@ -53,7 +59,7 @@ function Home() {
 							/>
 							<SquarCard
 								w={"8rem"}
-								content={<SubCard line1="1" line2="2" line3="3" />}
+								content={<SubCard line1="Good" line2="AQI value" line3="27" />}
 							/>
 						</div>
 						<WeatherCard
@@ -63,7 +69,7 @@ function Home() {
 						/>
 					</div>
 				</div>
-				<PicHolder content="" margin="1rem" color="black" />
+				<PicHolder character={demoImg} />
 			</div>
 		</div>
 	);
