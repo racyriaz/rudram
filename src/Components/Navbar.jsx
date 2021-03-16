@@ -44,7 +44,7 @@ function Navbar() {
 					<ul
 						style={{
 							backgroundColor: "gray",
-							height: "100vh",
+							height: "100%",
 							background:
 								"linear-gradient(0.93turn, rgb(103, 178, 111), rgb(0 136 204))",
 							color: "white",

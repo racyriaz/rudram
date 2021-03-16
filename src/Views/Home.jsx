@@ -9,6 +9,7 @@ import PicHolder from "../Components/PicHolder";
 import WeatherIcon from "../Components/WeatherIcon";
 import cha from "../Assets/RudramLogo.svg";
 import demoImg from "../Assets/demo.jpg";
+import ParamsCard from "../Components/ParamsCard";
 
 function Home() {
 	const day = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"][
@@ -70,6 +71,21 @@ function Home() {
 					</div>
 				</div>
 				<PicHolder character={demoImg} />
+			</div>
+			<div className="flex row justify-evenly">
+				<ParamsCard value="0.75" parameter="CO2" />
+				<ParamsCard value="0.75" parameter="CO2" />
+				<ParamsCard value="0.75" parameter="CO2" />
+				<ParamsCard value="0.75" parameter="CO2" />
+				<ParamsCard value="0.75" parameter="CO2" />
+				<ParamsCard value="0.75" parameter="CO2" />
+			</div>
+			<div className="flex row justify-between" style={{ margin: "3rem" }}>
+				<ParamsCard value="0.1" parameter="Temperature" />
+				<ParamsCard value="0.1" parameter="Temperature" />
+				<ParamsCard value="0.1" parameter="Temperature" />
+				<ParamsCard value="0.1" parameter="Temperature" />
+				<ParamsCard value="0.1" parameter="Temperature" />
 			</div>
 		</div>
 	);

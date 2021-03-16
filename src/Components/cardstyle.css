@@ -79,3 +79,24 @@
 	padding: 4rem;
 	margin: 0 2.25rem;
 }
+
+.paramsCard {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background-color: #f4f4f4;
+	border-radius: 0.5rem;
+	-webkit-box-shadow: 10px 10px 43px -22px rgba(0, 0, 0, 0.48);
+	-moz-box-shadow: 10px 10px 43px -22px rgba(0, 0, 0, 0.48);
+	box-shadow: 10px 10px 43px -22px rgba(0, 0, 0, 0.3);
+}
+
+.subParam1 {
+	padding: 2.5rem 3.5rem 1rem;
+}
+
+.subParam2 {
+	padding: 1rem 3.5rem 2.5rem;
+}
