@@ -100,3 +100,16 @@
 .subParam2 {
 	padding: 1rem 3.5rem 2.5rem;
 }
+
+@keyframes slidein {
+	from {
+		/* transform: scaleX(0); */
+		transform: skew(8deg);
+		transform-origin: 20% 40%;
+	}
+	to {
+		/* transform: scaleX(1); */
+		transform: skew(-9deg);
+		transform-origin: 20% 40%;
+	}
+}

@@ -1,15 +1,16 @@
 import React from "react";
-import "./Stylesheet.css";
+import cloud from "../Assets/cloud.svg";
+import polluted1 from "../Assets/polluted1.svg";
+import world from "../Assets/world.svg";
 import Card from "../Components/Card";
-import SubCard from "../Components/SubCard";
 import ChaCard from "../Components/ChaCard";
-import SquarCard from "../Components/SquarCard";
-import WeatherCard from "../Components/WeatherCard";
-import PicHolder from "../Components/PicHolder";
-import WeatherIcon from "../Components/WeatherIcon";
-import cha from "../Assets/RudramLogo.svg";
-import demoImg from "../Assets/demo.jpg";
 import ParamsCard from "../Components/ParamsCard";
+import PicHolder from "../Components/PicHolder";
+import SquarCard from "../Components/SquarCard";
+import SubCard from "../Components/SubCard";
+import WeatherCard from "../Components/WeatherCard";
+import WeatherIcon from "../Components/WeatherIcon";
+import "./Stylesheet.css";
 
 function Home() {
 	const day = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"][
@@ -45,7 +46,12 @@ function Home() {
 					className="flex row sub-container justify-center"
 					style={{ width: "50%" }}
 				>
-					<ChaCard charater={cha} width="80px" margin="auto" />
+					<ChaCard
+						charater={world}
+						moving={cloud}
+						width="220px"
+						margin="auto"
+					/>
 					<div className="flex col justify-center">
 						<div className="flex row justify-evenly">
 							<SquarCard
@@ -70,7 +76,17 @@ function Home() {
 						/>
 					</div>
 				</div>
-				<PicHolder character={demoImg} />
+				{/* <PicHolder character={polluted1} /> */}
+				<object
+					type="image/svg+xml"
+					data={polluted1}
+					width="28%"
+					height="auto"
+					style={{ position: "relative", right: "10%", paddingBottom: "1rem" }}
+				>
+					Your browser does not support SVG.
+				</object>
+				{/* <img src={polluted1} alt="polluted pic 1" /> */}
 			</div>
 			<div className="flex row justify-evenly">
 				<ParamsCard value="0.75" parameter="CO2" />
