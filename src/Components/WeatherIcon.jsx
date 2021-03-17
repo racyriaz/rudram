@@ -5,7 +5,7 @@ function WeatherIcon({ icon_name }) {
 	const defaults = {
 		icon: icon_name ? icon_name : "CLEAR_DAY",
 		color: "white",
-		size: "40px",
+		size: 50,
 		animate: true,
 	};
 	return (

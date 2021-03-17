@@ -1,24 +1,23 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import Home from "../Views/Home";
+import {
+	Aperture,
+	Droplet,
+	Home as HomeIcon,
+	Map,
+	Shield,
+	Trash2,
+	Truck,
+	Wind,
+} from "react-feather";
+import { BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
+import Rlogo from "../Assets/Rudramlogo-without-text.svg";
 import AirQuality from "../Views/AirQuality";
+import Attendance from "../Views/Attendance";
+import Home from "../Views/Home";
 import Safety from "../Views/Safety";
+import "../Views/Stylesheet.css";
 import WasteManagement from "../Views/WasteManagement";
 import WaterQuality from "../Views/WaterQuality";
-import Attendance from "../Views/Attendance";
-import "../Views/Stylesheet.css";
-import Rlogo from "../Assets/Rudramlogo-without-text.svg";
-
-import {
-	Home as HomeIcon,
-	Wind,
-	Shield,
-	Droplet,
-	Trash2,
-	Aperture,
-	Truck,
-	Map,
-} from "react-feather";
 
 function Navbar() {
 	function NavPack({ to, icon, text }) {

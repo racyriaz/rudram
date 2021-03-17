@@ -1,20 +1,29 @@
 .card {
-	height: 8rem;
+	height: 7rem;
 	width: 16.5rem;
 	border-radius: 0.5rem;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	justify-content: center;
+	/* background: linear-gradient(0.15turn, #af7676d5, #34c7c7de); */
 	background: linear-gradient(0.15turn, #fdfdfdd5, #d8d8d8de);
 	color: white;
 	font-size: 1.5rem;
 	font-weight: 600;
 	margin: 1rem;
+	padding: 0.15rem;
 	text-align: center;
+	-webkit-transition: none;
+	-moz-transition: none;
+	transition: none;
 }
 .card:hover {
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.151), 0 6px 20px 0 rgba(0, 0, 0, 0.45);
+}
+.card:active {
+	/* background-color: #00917c; */
+	color: tomato;
 }
 
 .anime-card-container {
@@ -86,19 +95,33 @@
 	justify-content: center;
 	align-items: center;
 	text-align: center;
-	background-color: #f4f4f4;
+	background-color: #fffefe;
 	border-radius: 0.5rem;
-	-webkit-box-shadow: 10px 10px 43px -22px rgba(0, 0, 0, 0.48);
+	/* 	-webkit-box-shadow: 10px 10px 43px -22px rgba(0, 0, 0, 0.48);
 	-moz-box-shadow: 10px 10px 43px -22px rgba(0, 0, 0, 0.48);
-	box-shadow: 10px 10px 43px -22px rgba(0, 0, 0, 0.3);
+	box-shadow: 10px 10px 43px -22px rgba(0, 0, 0, 0.3); */
+	-webkit-box-shadow: -3px 7px 8px #77777730;
+	-moz-box-shadow: -3px 7px 8px #77777730;
+	box-shadow: -3px 7px 8px #77777730;
+	margin: 1rem;
 }
 
 .subParam1 {
-	padding: 2.5rem 3.5rem 1rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	height: 4rem;
+	width: 9rem;
 }
 
 .subParam2 {
-	padding: 1rem 3.5rem 2.5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	height: 4rem;
+	width: 9rem;
 }
 
 @keyframes slidein {

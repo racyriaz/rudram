@@ -1,6 +1,6 @@
+import PropTypes from "prop-types";
 import React from "react";
 import "./cardstyle.css";
-import PropTypes from "prop-types";
 
 function PicHolder({ character }) {
 	return (
@@ -12,4 +12,5 @@ function PicHolder({ character }) {
 PicHolder.propTypes = {
 	character: PropTypes.object.isRequired,
 };
+
 export default PicHolder;

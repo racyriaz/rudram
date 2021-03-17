@@ -1,7 +1,6 @@
 import React from "react";
-import "./cardstyle.css";
-import PropTypes from "prop-types";
 import "../Views/Stylesheet.css";
+import "./cardstyle.css";
 
 function WeatherCard({ content, color }) {
 	return (
@@ -13,8 +12,8 @@ function WeatherCard({ content, color }) {
 		</div>
 	);
 }
-WeatherCard.propTypes = {
+/* WeatherCard.propTypes = {
 	content: PropTypes.object.isRequired,
 	color: PropTypes.string.isRequired,
-};
+}; */
 export default WeatherCard;

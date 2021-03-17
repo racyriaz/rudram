@@ -1,6 +1,5 @@
 import React from "react";
 import "./cardstyle.css";
-import PropTypes from "prop-types";
 
 function Card({ content, color }) {
 	const text = content;
@@ -13,9 +12,9 @@ function Card({ content, color }) {
 	);
 }
 
-Card.propTypes = {
-	content: PropTypes.string.isRequired,
-	color: PropTypes.string.isRequired,
+/* Card.propTypes = {
+	content: PropTypes.object.isRequired,
+	color: PropTypes.object.isRequired,
 };
-
+ */
 export default Card;

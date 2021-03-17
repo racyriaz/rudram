@@ -1,8 +1,7 @@
 import React from "react";
 import "./cardstyle.css";
-import PropTypes from "prop-types";
 
-function ChaCard({ charater, width, margin, moving }) {
+function ChaCard({ charater, width, moving }) {
 	return (
 		<div className="cha-card">
 			<div
@@ -20,7 +19,7 @@ function ChaCard({ charater, width, margin, moving }) {
 					data={moving}
 					width={width}
 					height="auto"
-					style={{ margin: { margin }, position: "absolute" }}
+					style={{ position: "absolute" }}
 				>
 					Your browser does not support SVG.
 				</object>
@@ -31,7 +30,6 @@ function ChaCard({ charater, width, margin, moving }) {
 					data={charater}
 					width={width}
 					height="auto"
-					style={{ margin: { margin } }}
 				>
 					Your browser does not support SVG.
 				</object>
@@ -40,11 +38,10 @@ function ChaCard({ charater, width, margin, moving }) {
 	);
 }
 
-ChaCard.propTypes = {
+/* ChaCard.propTypes = {
 	charater: PropTypes.object.isRequired,
 	width: PropTypes.string.isRequired,
-	style: PropTypes.string.isRequired,
 	moving: PropTypes.object.isRequired,
-};
+}; */
 
 export default ChaCard;
