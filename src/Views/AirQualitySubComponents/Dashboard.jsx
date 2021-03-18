@@ -4,8 +4,8 @@ import "../Stylesheet.css";
 function Dashboard() {
 	return (
 		<div className="flex col">
-			<h1>dashboard</h1>
-			<h2>page</h2>
+			<h5>dashboard</h5>
+			<div>asdjhf</div>
 		</div>
 	);
 }
