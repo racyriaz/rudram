@@ -11,7 +11,6 @@ import {
 } from "react-feather";
 import {
 	BrowserRouter as Router,
-	Link,
 	NavLink,
 	Route,
 	Switch,
