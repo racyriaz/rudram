@@ -43,7 +43,7 @@ function Navbar() {
 
 	return (
 		<Router>
-			<div className="flex row">
+			<div className="flex row ">
 				<nav className="nav">
 					<ul
 						className="nav-ul"
