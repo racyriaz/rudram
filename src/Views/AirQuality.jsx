@@ -7,7 +7,8 @@ import {
 	useLocation,
 } from "react-router-dom";
 import Card from "../Components/Card";
-import LiveRelay from "./LiveRelay";
+import Dashboard from "./AirQualitySubComponents/Dashboard";
+import LiveRelay from "./AirQualitySubComponents/LiveRelay";
 import "./Stylesheet.css";
 
 function AirQuality() {
@@ -67,7 +68,9 @@ function AirQuality() {
 					</div>
 				</nav>
 				<Switch>
-					<Route path="/air-quality/dashboard">{/* <LiveRelay /> */}</Route>
+					<Route path="/air-quality/dashboard">
+						<Dashboard />
+					</Route>
 					<Route path="/air-quality/predictions">{/* <LiveRelay /> */}</Route>
 					<Route path="/air-quality/know-aq">{/* <LiveRelay /> */}</Route>
 					<Route exact path="/air-quality">
