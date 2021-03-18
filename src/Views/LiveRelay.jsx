@@ -1,4 +1,5 @@
-import React from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 import cloud from "../Assets/cloud.svg";
 import polluted1 from "../Assets/polluted1.svg";
 import world from "../Assets/world.svg";
@@ -14,8 +15,32 @@ function LiveRelay() {
 	const day = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"][
 		new Date().getDay()
 	];
+	const [param, setparam] = useState(null);
+	const [aqi, setaqi] = useState(null);
+	const [trigger, settrigger] = useState(false);
+
+	function callApi() {
+		axios
+			.get("http://6a75b3fbad9c.ngrok.io/live-relay-data")
+			.then((res) => {
+				setparam(res.data.parameter);
+				setaqi(res.data.aqi_value);
+			})
+			.catch((error) => {
+				console.log("error", error);
+			});
+	}
+	useEffect(() => {
+		callApi();
+	}, [trigger]);
+	console.log("params tabel ", param, "aqi tabel", aqi);
+	function HitDatabase() {}
+	setInterval(() => {
+		settrigger(!trigger);
+	}, 60000);
+
 	return (
-		<div>
+		<div className="flex col">
 			<div className="flex row justify-between">
 				<div
 					className="flex row sub-container justify-center"
@@ -30,19 +55,26 @@ function LiveRelay() {
 									<SubCard
 										line1={<WeatherIcon icon_name="PARTLY_CLOUDY_DAY" />}
 										line2={day}
-										line3="30°C"
+										line3={
+											param && param[6] && param[6].name == "room_temp"
+												? param[6].value
+												: null
+										}
 									/>
 								}
 							/>
 							<SquarCard
-								w={"8rem"}
-								content={<SubCard line1="Good" line2="AQI value" line3="27" />}
+								w={"8.2rem"}
+								content={
+									<SubCard
+										line1={aqi ? aqi.category : null}
+										line2="AQI value"
+										line3={aqi ? aqi.score : null}
+									/>
+								}
 							/>
 						</div>
-						<WeatherCard
-							color="#9ecca4"
-							content="Air Quality is considered sastisfactory, and air pollution is at little or no risk"
-						/>
+						<WeatherCard color="#9ecca4" content={aqi ? aqi.advice : null} />
 					</div>
 				</div>
 				<object
@@ -55,20 +87,17 @@ function LiveRelay() {
 					Your browser does not support SVG.
 				</object>
 			</div>
-			<div className="flex row justify-evenly">
-				<ParamsCard value="0.75" parameter="CO2" />
-				<ParamsCard value="0.75" parameter="CO" />
-				<ParamsCard value="0.75" parameter="PM2.5" />
-				<ParamsCard value="0.75" parameter="CO2" />
-				<ParamsCard value="0.75" parameter="CO2" />
-				<ParamsCard value="0.75" parameter="CO2" />
-			</div>
-			<div className="flex row justify-evenly" style={{ margin: "3rem" }}>
-				<ParamsCard value="0.1" parameter="Temperature" />
-				<ParamsCard value="0.1" parameter="Temperature" />
-				<ParamsCard value="0.1" parameter="Temperature" />
-				<ParamsCard value="0.1" parameter="Temperature" />
-				<ParamsCard value="0.1" parameter="Temperature" />
+			<div
+				className="flex row justify-evenly"
+				style={{ flexWrap: "wrap", width: "85%", margin: "auto" }}
+			>
+				{param
+					? param.map((x, index) => {
+							return (
+								<ParamsCard key={index} value={x.value} parameter={x.name} />
+							);
+					  })
+					: console.log("param not found")}
 			</div>
 		</div>
 	);

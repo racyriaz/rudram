@@ -1,0 +1,64 @@
+{
+	"aqi_value": {
+		"category": "good",
+		"advice": "it is adviced to not go out for aasthama peoples",
+		"score": "2.75"
+	},
+	"parameter": {
+		{
+            "name": "pm2_5",
+			"score": 0,
+			"value": 540.28
+		},
+		{
+            "name": "co2",
+			"score": 0,
+			"value": 3.51
+		},
+		{
+            "name": "co",
+			"score": 0,
+			"value": 5.26
+		},
+		{
+            "name": "alcohol",
+			"score": 0,
+			"value": 1.67
+		},
+		{
+            "name": "pressure",
+			"score": 0,
+			"value": null
+		},
+		{
+            "name": "voc",
+			"score": 0,
+			"value": null
+		},
+		{
+            "name": "humidity",
+			"score": 0,
+			"value": 51.5
+		},
+		{
+            "name": "nh4",
+			"score": 0,
+			"value": 5.19
+		},
+		{
+            "name": "room_temp",
+			"score": 0,
+			"value": 27.4
+		},
+		{
+            "name": "acetone",
+			"score": 0,
+			"value": 0.6
+		},
+		{
+            "name": "toluene",
+			"score": 0,
+			"value": 0.71
+		}
+	}
+}

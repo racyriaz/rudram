@@ -1,16 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import {
 	BrowserRouter as Router,
 	Link,
 	NavLink,
 	Route,
 	Switch,
+	useLocation,
 } from "react-router-dom";
 import Card from "../Components/Card";
 import LiveRelay from "./LiveRelay";
 import "./Stylesheet.css";
 
 function AirQuality() {
+	const [url, seturl] = useState(null);
+	// const location = useLocation();
+	function HeaderView() {
+		const location = useLocation();
+		seturl(location.pathname);
+		console.log(url);
+	}
 	return (
 		<Router>
 			<div className="flex col">
