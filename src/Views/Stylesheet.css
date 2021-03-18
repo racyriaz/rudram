@@ -61,6 +61,13 @@ body {
 .nav-links {
 	color: yellowgreen !important;
 }
+.active .nav-highlight {
+	background-color: rgb(255, 136, 0) !important;
+}
+.active .nav-links {
+	background-color: rgba(255, 255, 255, 0.15);
+	box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.075);
+}
 .white {
 	color: whitesmoke;
 	white-space: nowrap;

@@ -9,7 +9,13 @@ import {
 	Truck,
 	Wind,
 } from "react-feather";
-import { BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
+import {
+	BrowserRouter as Router,
+	Link,
+	NavLink,
+	Route,
+	Switch,
+} from "react-router-dom";
 import Rlogo from "../Assets/Rudramlogo-without-text.svg";
 import AirQuality from "../Views/AirQuality";
 import Attendance from "../Views/Attendance";
@@ -23,7 +29,7 @@ function Navbar() {
 	function NavPack({ to, icon, text }) {
 		return (
 			<div className="nav-links">
-				<Link className="block" to={`${to}`}>
+				<NavLink exact className="block" to={`${to}`} activeClassName="active">
 					<div className="flex row justify-between">
 						<div className="flex row flex-align">
 							<div className="lr-pad-5px white">{icon}</div>
@@ -31,7 +37,7 @@ function Navbar() {
 						</div>
 						<div className="nav-highlight"></div>
 					</div>
-				</Link>
+				</NavLink>
 			</div>
 		);
 	}
@@ -39,8 +45,9 @@ function Navbar() {
 	return (
 		<Router>
 			<div className="flex row">
-				<nav>
+				<nav className="nav">
 					<ul
+						className="nav-ul"
 						style={{
 							backgroundColor: "gray",
 							height: "100%",
