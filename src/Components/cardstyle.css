@@ -1,5 +1,5 @@
 .card {
-	height: 7rem;
+	height: 6rem;
 	width: 16.5rem;
 	border-radius: 0.5rem;
 	display: flex;
@@ -9,7 +9,7 @@
 	/* background: linear-gradient(0.15turn, #af7676d5, #34c7c7de); */
 	background: linear-gradient(0.15turn, #fdfdfdd5, #d8d8d8de);
 	color: white;
-	font-size: 1.5rem;
+	font-size: 1.25rem;
 	font-weight: 600;
 	margin: 0;
 	text-align: center;

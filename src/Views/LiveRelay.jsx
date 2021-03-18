@@ -10,6 +10,7 @@ import SubCard from "../Components/SubCard";
 import WeatherCard from "../Components/WeatherCard";
 import WeatherIcon from "../Components/WeatherIcon";
 import "./Stylesheet.css";
+import BounceLoader from "react-spinners/BounceLoader";
 
 function LiveRelay() {
 	const day = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"][
@@ -18,6 +19,7 @@ function LiveRelay() {
 	const [param, setparam] = useState(null);
 	const [aqi, setaqi] = useState(null);
 	const [trigger, settrigger] = useState(false);
+	const [loaded, setLoaded] = useState(false);
 
 	function callApi() {
 		axios
@@ -25,9 +27,11 @@ function LiveRelay() {
 			.then((res) => {
 				setparam(res.data.parameter);
 				setaqi(res.data.aqi_value);
+				setLoaded(true);
 			})
 			.catch((error) => {
 				console.log("error", error);
+				setLoaded(false);
 			});
 	}
 	useEffect(() => {
@@ -38,6 +42,11 @@ function LiveRelay() {
 	setInterval(() => {
 		settrigger(!trigger);
 	}, 60000);
+	const override = {
+		display: "block",
+		margin: "8rem auto 0",
+		borderColor: "black",
+	};
 
 	return (
 		<div className="flex col">
@@ -91,13 +100,24 @@ function LiveRelay() {
 				className="flex row justify-evenly"
 				style={{ flexWrap: "wrap", width: "85%", margin: "auto" }}
 			>
-				{param
-					? param.map((x, index) => {
+				{loaded ? (
+					param ? (
+						param.map((x, index) => {
 							return (
 								<ParamsCard key={index} value={x.value} parameter={x.name} />
 							);
-					  })
-					: console.log("param not found")}
+						})
+					) : (
+						console.log("param not found")
+					)
+				) : (
+					<BounceLoader
+						color={"#86E7D4"}
+						loading={true}
+						css={override}
+						size={150}
+					/>
+				)}
 			</div>
 		</div>
 	);
