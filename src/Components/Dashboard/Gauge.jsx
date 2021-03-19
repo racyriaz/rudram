@@ -5,9 +5,10 @@ import "../../Views/Stylesheet.css";
 function Gauge({ id, percentage }) {
 	const chartStyle = {
 		height: "auto",
-		width: "150px",
-		color: "black",
+		width: "135px",
 		zIndex: 5,
+		fontFamily: "",
+		fontWeight: 800,
 	};
 	return (
 		<div className="flex col justify-center">
@@ -15,12 +16,13 @@ function Gauge({ id, percentage }) {
 				id={id}
 				nrOfLevels={5}
 				style={chartStyle}
-				colors={["#FF5F6D", "#FFC371", "#3de260"]}
-				textColor="#d49d42"
+				colors={["#3de260", "#FFC371", "#FF5F6D"]}
+				textColor="#007580"
+				hideText="true"
 				percent={percentage}
 				animate={true}
 				marginInPercent="0.025"
-				cornerRadius="5"
+				cornerRadius="3"
 			/>
 		</div>
 	);

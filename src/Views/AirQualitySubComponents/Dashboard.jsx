@@ -1,6 +1,7 @@
 import React from "react";
 import "../Stylesheet.css";
 import Gauge from "../../Components/Dashboard/Gauge";
+import Chart from "../../Components/Dashboard/Chart";
 
 function Dashboard() {
 	return (
@@ -17,11 +18,12 @@ function Dashboard() {
 				<div className="flex col mg-lr-1rem">
 					<Gauge id="1" percentage="0.9" />
 					<h6 style={{ display: "block", textAlign: "center" }}>
-						API GAUGE CHART
+						POLLUTION LEVEL
 					</h6>
 				</div>
 			</div>
 			<div className="flex row"></div>
+			<Chart />
 		</div>
 	);
 }
