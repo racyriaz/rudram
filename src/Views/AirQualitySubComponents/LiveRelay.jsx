@@ -76,7 +76,11 @@ function LiveRelay() {
 								w={"8.2rem"}
 								content={
 									<SubCard
-										line1={aqi ? aqi.category : null}
+										line1={
+											aqi
+												? aqi.category[0].toUpperCase() + aqi.category.slice(1)
+												: "Loading . . ."
+										}
 										line2="AQI value"
 										line3={aqi ? aqi.score : null}
 									/>

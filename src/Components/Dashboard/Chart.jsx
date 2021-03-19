@@ -1,13 +1,22 @@
 import React from "react";
 import "../../Views/Stylesheet.css";
-import Thermometer from "react-thermometer-ecotropy";
+/* import Thermometer from "react-thermometer-ecotropy";
+<Thermometer
+theme="light"
+value="28"
+max="60"
+steps="2"
+format="°C"
+size="small"
+height={360}
+/> */
 
 function Chart() {
 	const chart1 = {
 		border: "2px solid #387c6d",
 		borderRadius: "0.75rem",
 		height: "22rem",
-		width: "44rem",
+		width: "48rem",
 		textAlign: "center",
 		margin: "2rem 1.5rem",
 	};
@@ -15,7 +24,7 @@ function Chart() {
 		border: "2px solid #387c6d",
 		borderRadius: "0.75rem",
 		height: "22rem",
-		width: "18rem",
+		width: "22rem",
 		textAlign: "center",
 		margin: "2rem 1.5rem",
 	};
@@ -26,17 +35,6 @@ function Chart() {
 			</div>
 			<div className="flex justify-center" style={chart2}>
 				<h1>Next 5 days AQI</h1>
-			</div>
-			<div style={{ cursor: "grab" }}>
-				<Thermometer
-					theme="light"
-					value="28"
-					max="60"
-					steps="2"
-					format="°C"
-					size="small"
-					height={360}
-				/>
 			</div>
 		</div>
 	);
