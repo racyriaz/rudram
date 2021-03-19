@@ -56,6 +56,9 @@ body {
 	padding: 20px;
 }
 .lr-pad-5px {
+	padding: 0 5px;
+}
+.lr-pad-15px {
 	padding: 0 15px;
 }
 .mg-1rem {
@@ -71,12 +74,23 @@ body {
 	margin: 2rem 0;
 }
 .mg-lr-1rem {
-	margin: 0 1rem;
+	margin: 0 1rem !important;
 }
 .mg-lr-2rem {
-	margin: 0 2rem;
+	margin: 0 2rem !important;
 }
-
+.mg-l-1rem {
+	margin-left: 1rem;
+}
+.mg-l-2rem {
+	margin-left: 2rem;
+}
+.mg-r-1rem {
+	margin-right: 1rem;
+}
+.mg-r-2rem {
+	margin-right: 2rem;
+}
 .white {
 	color: whitesmoke;
 	white-space: nowrap;
@@ -190,4 +204,9 @@ body {
 	max-width: 20rem;
 	width: 18rem;
 	min-width: 10rem;
+}
+.multiDropdown {
+	max-width: 25rem;
+	width: 20rem;
+	min-width: 25rem;
 }
