@@ -18,11 +18,11 @@ function Gauge({ id, percentage }) {
 				style={chartStyle}
 				colors={["#3de260", "#FFC371", "#FF5F6D"]}
 				textColor="#007580"
-				hideText="true"
+				hideText={true}
 				percent={percentage}
 				animate={true}
-				marginInPercent="0.025"
-				cornerRadius="3"
+				marginInPercent={0.025}
+				cornerRadius={3}
 			/>
 		</div>
 	);

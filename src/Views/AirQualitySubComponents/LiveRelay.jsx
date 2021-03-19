@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import BounceLoader from "react-spinners/BounceLoader";
 import cloud from "../../Assets/cloud.svg";
 import polluted1 from "../../Assets/polluted1.svg";
 import world from "../../Assets/world.svg";
@@ -10,7 +11,6 @@ import SubCard from "../../Components/SubCard";
 import WeatherCard from "../../Components/WeatherCard";
 import WeatherIcon from "../../Components/WeatherIcon";
 import "../Stylesheet.css";
-import BounceLoader from "react-spinners/BounceLoader";
 
 function LiveRelay() {
 	const day = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"][
@@ -65,7 +65,7 @@ function LiveRelay() {
 										line1={<WeatherIcon icon_name="PARTLY_CLOUDY_DAY" />}
 										line2={day}
 										line3={
-											param && param[6] && param[6].name == "room_temp"
+											param && param[6] && param[6].name === "room_temp"
 												? param[6].value
 												: null
 										}

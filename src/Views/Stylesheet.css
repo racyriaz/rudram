@@ -185,3 +185,9 @@ body {
 .sub-container {
 	width: 50%;
 }
+
+.dropdown {
+	max-width: 20rem;
+	width: 18rem;
+	min-width: 10rem;
+}

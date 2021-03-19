@@ -11,8 +11,8 @@ size="small"
 height={360}
 /> */
 
-function Chart() {
-	const chart1 = {
+function SplitChart() {
+	const chart_1_css = {
 		border: "2px solid #387c6d",
 		borderRadius: "0.75rem",
 		height: "22rem",
@@ -20,7 +20,7 @@ function Chart() {
 		textAlign: "center",
 		margin: "2rem 1.5rem",
 	};
-	const chart2 = {
+	const chart_2_css = {
 		border: "2px solid #387c6d",
 		borderRadius: "0.75rem",
 		height: "22rem",
@@ -30,14 +30,14 @@ function Chart() {
 	};
 	return (
 		<div className="flex row justify-between">
-			<div className="flex justify-center" style={chart1}>
-				<h1>Today's chart</h1>
+			<div className="flex justify-center" style={chart_1_css}>
+				<h1>Todays Hourly AQi predictions</h1>
 			</div>
-			<div className="flex justify-center" style={chart2}>
-				<h1>Next 5 days AQI</h1>
+			<div className="flex justify-center" style={chart_2_css}>
+				<h1>Next 5 days AQI Predictions</h1>
 			</div>
 		</div>
 	);
 }
 
-export default Chart;
+export default SplitChart;
