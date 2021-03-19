@@ -1,7 +1,8 @@
 import React from "react";
-import "../Stylesheet.css";
-import Gauge from "../../Components/Dashboard/Gauge";
+import Card from "../../Components/Card";
 import Chart from "../../Components/Dashboard/Chart";
+import Gauge from "../../Components/Dashboard/Gauge";
+import "../Stylesheet.css";
 
 function Dashboard() {
 	return (
@@ -22,8 +23,23 @@ function Dashboard() {
 					</h6>
 				</div>
 			</div>
-			<div className="flex row"></div>
-			<Chart />
+			<div className="flex row justify-evenly">
+				<Chart />
+			</div>
+			<div className="flex col justify-evenly">
+				<div className="flex row justify-evenly mg-1rem">
+					<Card content={<h1>Pollutant 1</h1>} />
+					<Card content={<h1>Pollutant 2</h1>} />
+					<Card content={<h1>Pollutant 3</h1>} />
+					<Card content={<h1>Pollutant 4</h1>} />
+				</div>
+				<div className="flex row justify-evenly mg-1rem">
+					<Card content={<h1>Pollutant 5</h1>} />
+					<Card content={<h1>Pollutant 6</h1>} />
+					<Card content={<h1>Pollutant 7</h1>} />
+					<Card content={<h1>Pollutant 8</h1>} />
+				</div>
+			</div>
 		</div>
 	);
 }
