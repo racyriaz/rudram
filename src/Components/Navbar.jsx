@@ -25,10 +25,19 @@ import WasteManagement from "../Views/WasteManagement";
 import WaterQuality from "../Views/WaterQuality";
 
 function Navbar() {
+	const matchWorkaround = (pathname) => (isMatch, location) =>
+		isMatch || location.pathname.startsWith(pathname);
 	function NavPack({ to, icon, text }) {
 		return (
 			<div className="nav-links">
-				<NavLink exact className="block" to={`${to}`} activeClassName="active">
+				<NavLink
+					exact
+					strict
+					className="block"
+					to={`${to}`}
+					activeClassName="active"
+					isActive={matchWorkaround(`${to}`)}
+				>
 					<div className="flex row justify-between">
 						<div className="flex row flex-align">
 							<div className="lr-pad-5px white">{icon}</div>
@@ -70,7 +79,7 @@ function Navbar() {
 							<h2 style={{ fontWeight: "500" }}>RUDRAM</h2>
 						</li>
 						<li>
-							<NavPack to="/" icon={<HomeIcon />} text="Home" />
+							<NavPack to="/home" icon={<HomeIcon />} text="Home" />
 						</li>
 						<li>
 							<NavPack to="/air-quality" icon={<Wind />} text="Air Quality" />
@@ -128,7 +137,7 @@ function Navbar() {
 					<Route path="/attendance">
 						<Attendance />
 					</Route>
-					<Route exact path="/">
+					<Route exact path="/home">
 						<Home />
 					</Route>
 				</Switch>

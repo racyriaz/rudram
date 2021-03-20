@@ -10,6 +10,7 @@ import SquarCard from "../../Components/SquarCard";
 import SubCard from "../../Components/SubCard";
 import WeatherCard from "../../Components/WeatherCard";
 import WeatherIcon from "../../Components/WeatherIcon";
+import { Helmet } from "react-helmet";
 import "../Stylesheet.css";
 
 function LiveRelay() {
@@ -50,6 +51,13 @@ function LiveRelay() {
 
 	return (
 		<div className="flex col">
+			<Helmet>
+				<title>Live Relay | Rudram Infra Z Analytics </title>
+				<meta
+					name="description"
+					content="Stay tuned to look Live values of Air Quality in your area by Rudram Infra Z Analytics"
+				/>
+			</Helmet>
 			<div className="flex row justify-between">
 				<div
 					className="flex row sub-container justify-center"

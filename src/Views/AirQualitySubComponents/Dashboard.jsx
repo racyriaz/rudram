@@ -5,6 +5,7 @@ import ChartPlaceHolder from "../../Components/ChartPlaceHolder";
 import Select from "react-select";
 import makeAnimated from "react-select/animated";
 import "../Stylesheet.css";
+import { Helmet } from "react-helmet";
 
 function Dashboard() {
 	const animatedComponents = makeAnimated();
@@ -27,6 +28,13 @@ function Dashboard() {
 	];
 	return (
 		<div className="flex col mg-lr-1rem">
+			<Helmet>
+				<title>Dashboard | Rudram Infra Z Analytics </title>
+				<meta
+					name="description"
+					content="Dashboard Analytics on Air Quality by Rudram Infra Z Analytics"
+				/>
+			</Helmet>
 			<div className="flex row">
 				<h4 className="flex justify-center pad-10px font-2-5rem">AQI</h4>
 				<div className="pad-10px">
